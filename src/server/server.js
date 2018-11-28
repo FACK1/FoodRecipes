@@ -1,4 +1,4 @@
-// var proccess = require('dotenv/config');
+ require('dotenv').config();
 
 const http = require('http');
 /* eslint-disable */
