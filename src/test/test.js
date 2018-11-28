@@ -12,7 +12,7 @@ test('Testing tape', (t) => {
 
 test('Testing homeHandler', (t) => {
   supertest(router)
-    .get("/")
+    .get('/')
     .expect(200)
     .expect('Content-Type', /html/)
     .end((error, result) => {
@@ -34,7 +34,7 @@ test('Testing publicHandler ', (t) => {
     });
 });
 
-/*
+
 test('Testing searchRecipesHandler ', (t) => {
   supertest(router)
     .get('/search?value=burger')
@@ -46,7 +46,7 @@ test('Testing searchRecipesHandler ', (t) => {
       t.end();
     });
 });
-
+/*
 
 test('Testing getRecipeHandler ', (t) => {
   supertest(router)
