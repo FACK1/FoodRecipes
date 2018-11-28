@@ -1,7 +1,6 @@
 # FoodRecipes
 GSG Week 5 Project
 
-
 Website link: https://foodrecipes-.herokuapp.com/
 
 About:
@@ -12,27 +11,27 @@ App Architecture:
 * public Folder:
 
 . CSS
-  index.css
-  reset.css
+  -index.css
+  -reset.css
 
 . JS
-  Dom.js
-  requests.js
+  -Dom.js
+  -requests.js
 
 . Index.html
 
 * Src Folder:
 
-. Archrecipes
-   Searchrecipes.js
+. Seachrecipes
+   -Searchrecipes.js
    
 . Server:
-   handlers.js
-   router.js
-   server.js
+   -handlers.js
+   -router.js
+   -server.js
    
 . Test
-   test.js
+   -test.js
 
 * .gitignore
 * package.json
