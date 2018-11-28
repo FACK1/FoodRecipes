@@ -1,5 +1,5 @@
 # FoodRecipes
-GSG Week 5 Project
+
 
 Website link: https://foodrecipes-.herokuapp.com/
 
