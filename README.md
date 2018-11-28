@@ -54,7 +54,7 @@ our website is a  page contains a title for website with background , then will 
 
 3- Put in terminal : **npm install**.
 
-4- Create file and called its **.env** and put in its  PORT=8000
+4- Create file and called its **.env** and put in its  PORT=8000 and 
                                                    API_KEY=f6d8c7ad27c900355d91eadd44418003
 
 
