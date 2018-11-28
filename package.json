@@ -4,9 +4,8 @@
   "description": "GSG Week 5 Project",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./src/test/test.js | tap-spec ",
     "lint": "./node_modules/.bin/eslint ./src/server/**/*.js",
-    "lint-fix": "./node_modules/.bin/eslint --fix ./src/server/**/*.js",
+    "lint-fix": "./node_modules/.bin/eslint --fix ./src/**/*.js",
     "start": "nodemon ./src/server/server.js"
   },
   "repository": {
