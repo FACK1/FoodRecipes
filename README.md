@@ -32,7 +32,9 @@ In our app you can  search for your favourite food by putting the name of it in 
   - Server folder:
   
     server.js
+
    router.js
+   
    handlers.js
   - Test folder:
   
