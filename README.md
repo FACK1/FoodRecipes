@@ -1,7 +1,7 @@
 # Food Recipes 
 
 ### About:
-A website for searching about food recipes
+A website for searching about food recipes , allows users to search any food they want and display its recipes and image  for its  .
 ### User journey: 
 In our app you can  search for your favourite food by putting the name of it in the place of search. 
 ### Site Link in Heroku :
