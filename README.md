@@ -10,6 +10,7 @@ In our app you can  search for your favourite food by putting the name of it in 
 
 # Architecture 
 - Front-End :
+
   we create  public folder and put inside its folders like :
    - Css folder:
    
