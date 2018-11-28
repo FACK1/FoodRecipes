@@ -69,7 +69,7 @@ our website is a  page contains a title for website with background , then will 
 
 ### Team Member:
 - [Mohammad Al-Sharif](https://github.com/mhmdtshref)
-- [Shaimaa Azmi](https://github.com/shaima96)
+- [Shaima' Azmi](https://github.com/shaima96)
 - [Fidaa alhersh](https://github.com/fdo2)
 - [Safa amro](https://github.com/safaaamro)
 
