@@ -1,6 +1,6 @@
 const test = require('tape');
 const supertest = require('supertest');
-const router = require('./router');
+const router = require('../server/router');
 
 test('Testing tape', (t) => {
   const expected = '';
@@ -12,8 +12,9 @@ test('Testing tape', (t) => {
 
 test('Testing homeHandler', (t) => {
   supertest(router)
-    .get('/')
-    .expect(200, { 'Content-Type': /html/ })
+    .get("/")
+    .expect(200)
+    .expect('Content-Type', /html/)
     .end((error, result) => {
       t.error(error);
       t.equal(result.statusCode, 200, 'Status code should be 200');
@@ -24,7 +25,8 @@ test('Testing homeHandler', (t) => {
 test('Testing publicHandler ', (t) => {
   supertest(router)
     .get('/index.html')
-    .expect(200, { 'Content-Type': /html/ })
+    .expect(200)
+    .expect('Content-Type', /html/)
     .end((error, result) => {
       t.error(error);
       t.equal(result.statusCode, 200, 'Status code should be 200');
@@ -32,10 +34,12 @@ test('Testing publicHandler ', (t) => {
     });
 });
 
+/*
 test('Testing searchRecipesHandler ', (t) => {
   supertest(router)
     .get('/search?value=burger')
-    .expect(200, { 'Content-Type': /json/ })
+    .expect(200)
+    .expect('Content-Type', /json/)
     .end((error, result) => {
       t.error(error);
       t.equal(result.statusCode, 200, 'Status code should be 200');
@@ -54,3 +58,4 @@ test('Testing getRecipeHandler ', (t) => {
       t.end();
     });
 });
+*/
