@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-// const querystring = require('querystring');
+const querystring = require('querystring');
 const searchRecipes = require('../searchRecipes/searchRecipes.js');
 
 const errorHandler = (request, response) => {
@@ -9,14 +9,14 @@ const errorHandler = (request, response) => {
 };
 
 const homeHandler = (request, response) => {
-  const htmlPath = path.join(__dirname, '..','..','public','index.html');
+  const htmlPath = path.join(__dirname, '..', '..', 'public', 'index.html');
   fs.readFile(htmlPath, (error, htmlFile) => {
     if (error) {
       response.writeHead(500, { 'content-Type': 'text/html' });
       response.end('<h1> Server error! sorry</h1>');
       return;
     }
-    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.writeHead(200, { 'Content-Type': 'text/html' });
     response.write(htmlFile);
     response.end();
   });
@@ -25,15 +25,15 @@ const homeHandler = (request, response) => {
 const publicHandler = (request, response) => {
   const extension = request.url.split('.')[1];
   const contentTypeMapping = {
-    'html': 'text/html',
-    'css': 'text/css',
-    'js': 'application/js',
+    html: 'text/html',
+    css: 'text/css',
+    js: 'application/js',
   };
   if (!contentTypeMapping[extension]) {
     response.writeHead(404, { 'Content-Type': 'text/html' });
     response.end('<h1> Not Found </h1>');
   } else {
-    const filePath = path.join(__dirname, '..','..', 'public', request.url);
+    const filePath = path.join(__dirname, '..', '..', 'public', request.url);
     fs.readFile(filePath, (error, file) => {
       if (error) {
         errorHandler(request, response);
@@ -44,21 +44,20 @@ const publicHandler = (request, response) => {
   }
 };
 
-const searchHandler = (request, response) => {
-  const searchValue = request.url.split('/')[2];
-  if (!searchValue) {
+const searchRecipesHandler = (request, response) => {
+  //const searchValue = request.url.split('/')[2];
+  if (!request.url.includes('/search?value=')){
     errorHandler(request, response);
   } else {
-    const reslut = searchRecipes(searchValue);
-    const convertData = JSON.stringify(reslut);
-    response.writeHead(200, { 'content-type': 'application/js' });
-    response.end(convertData);
+    let parsedQuery = querystring.parse(request.url.split('?')[1]);
+    //console.log("HHHHHHHHHHHHHHHH:", parsedQuery);
+    searchRecipes.search(request, response, parsedQuery.value);
   }
 };
 
 module.exports = {
   homeHandler,
   publicHandler,
-  searchHandler,
+  searchRecipesHandler,
   errorHandler,
 };
