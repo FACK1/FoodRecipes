@@ -2,13 +2,13 @@
 
 # About:
 A website for searching about food recipes
-# User journey:
+# User journey 
 In our app you can  search for your favourite food by putting the name of it in the place of search. 
 # Site Link in Heroku :
 [Food Recpies](https://foodrecipes-.herokuapp.com/) 
 # Site design 
 
-# Architecture:
+# Architecture 
 - Front-End :
   we create  public folder and put inside its folders like :
    - Css folder:
@@ -47,14 +47,11 @@ our website is a  page contains a title for website with background , then will 
  # How to run our site on your machine?
 
 1- Clone this repo.
-
 2- Open your command line.
-
 3- Put in terminal : **npm install**.
-
-4- Then put in terminal : **node src/server.js** to run the server. 
-
-5- Open your browser and put in terminal: **localhost:8000**.
+4- 
+5- Then put in terminal : **node src/server.js** to run the server. 
+6- Open your browser and put in terminal: **localhost:8000**.
 
 
 # Team Member:
