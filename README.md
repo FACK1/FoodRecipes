@@ -12,26 +12,31 @@ In our app you can  search for your favourite food by putting the name of it in 
 - Front-End :
   we create  public folder and put inside its folders like :
    - Css folder:
-    index.css
-    resets.css
+   
+       index.css
+
+      resets.css
   - Js folder:
-   dom.js
-   requests.js
+  
+     dom.js
+
+     requests.js
+   
   - index.html 
   
 - Back-End:
   we create src folder and put files in its like :
   - SearchRecipes folder:
   
-   searchRecipes.js
+    searchRecipes.js
   - Server folder:
   
-   server.js
+    server.js
    router.js
    handlers.js
   - Test folder:
   
-  test.js
+    test.js
 
 
 - HTML structure :
