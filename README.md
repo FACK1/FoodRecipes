@@ -8,23 +8,32 @@ About:
 A website allows users to search for their wanted food recipe.
 
 App Architecture:
+
 * public Folder:
--CSS
+
+CSS
   index.css
   reset.css
--JS
+
+JS
   Dom.js
   requests.js
--index.html
-* Src Folder:
--Searchrecipes
+
+ndex.html
+
+Src Folder:
+
+archrecipes
    Searchrecipes.js
--Server:
+   
+Server:
    handlers.js
    router.js
    server.js
--Test
+   
+Test
    test.js
+
 * .gitignore
 * package.json
 
