@@ -59,5 +59,5 @@ module.exports = {
   homeHandler,
   publicHandler,
   searchRecipesHandler,
-  errorHandler,
+  errorHandler
 };
