@@ -1,9 +1,14 @@
+// var proccess = require('dotenv/config');
 
 const http = require('http');
+/* eslint-disable */
 const router = require('./router.js');
-const PORT =  process.env.PORT ||8000;
+/* eslint-enable */
+const PORT = process.env.PORT || 8000;
 const server = http.createServer();
 
-server.listen(PORT, function(){
-    console.log("server is up and running on port 8000!")
-})
+server.listen(PORT, () => {
+  /* eslint-disable */
+  console.log('server is up and running on port 8000!');
+  /* eslint-enable */
+});

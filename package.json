@@ -4,8 +4,9 @@
   "description": "GSG Week 5 Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "./node_modules/.bin/eslint",
+    "test": "tape ./src/test/test.js | tap-spec ",
+    "lint": "./node_modules/.bin/eslint ./src/server/**/*.js",
+    "lint-fix": "./node_modules/.bin/eslint --fix ./src/server/**/*.js",
     "start": "nodemon ./src/server/server.js"
   },
   "repository": {
@@ -22,12 +23,13 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
-  },
-  "dependencies": {
-    "dotenv": "^6.1.0",
-    "nodemon": "^1.18.7",
+    "eslint-plugin-import": "^2.14.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.7",
+    "request": "^2.88.0",
+    "supertest": "^3.3.0"
   }
 }
