@@ -45,12 +45,12 @@ const publicHandler = (request, response) => {
 };
 
 const searchRecipesHandler = (request, response) => {
-  //const searchValue = request.url.split('/')[2];
-  if (!request.url.includes('/search?value=')){
+  // const searchValue = request.url.split('/')[2];
+  if (!request.url.includes('/search?value=')) {
     errorHandler(request, response);
   } else {
-    let parsedQuery = querystring.parse(request.url.split('?')[1]);
-    //console.log("HHHHHHHHHHHHHHHH:", parsedQuery);
+    const parsedQuery = querystring.parse(request.url.split('?')[1]);
+    // console.log("HHHHHHHHHHHHHHHH:", parsedQuery);
     searchRecipes.search(request, response, parsedQuery.value);
   }
 };
@@ -59,5 +59,5 @@ module.exports = {
   homeHandler,
   publicHandler,
   searchRecipesHandler,
-  errorHandler
+  errorHandler,
 };
