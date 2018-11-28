@@ -1,6 +1,3 @@
-{
-  "name": "FoodRecipes",
-  "version": "1.0.0",
   "description": "GSG Week 5 Project",
   "main": "index.js",
   "scripts": {
@@ -8,20 +5,25 @@
     "eslint": "./node_modules/.bin/eslint",
     "start": "nodemon ./src/server/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FACK1/FoodRecipes.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/FACK1/FoodRecipes/issues"
-  },
-  "homepage": "https://github.com/FACK1/FoodRecipes#readme",
+   "repository": {
+     "type": "git",
+     "url": "git+https://github.com/FACK1/FoodRecipes.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+     "url": "https://github.com/FACK1/FoodRecipes/issues"
+   },
+   "homepage": "https://github.com/FACK1/FoodRecipes#readme",
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "nodemon": "^1.18.7",
     "eslint-plugin-import": "^2.14.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
