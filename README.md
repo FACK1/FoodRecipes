@@ -1,14 +1,13 @@
 # FoodRecipes
 
-
 Website link: https://foodrecipes-.herokuapp.com/
 
-About:
+*About*:
 A website allows users to search for their wanted food recipe.
 
 *App Architecture*:
 - public Folder: 
-   -CSS Folder:
+   CSS Folder:
   index.css
   reset.css
  -  JS
