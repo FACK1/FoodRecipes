@@ -27,7 +27,7 @@ In our app you can  search for your favourite food by putting the name of it in 
   
 - Back-End:
 
-  we create src folder and put files in its like :
+  we create src folder and put folders in its like :
   - SearchRecipes folder:
   
     searchRecipes.js
