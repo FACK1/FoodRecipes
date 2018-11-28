@@ -7,10 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-
 	<meta charset="utf-8">
 </head>
-
 <body class = "container-flex">
   	<!-- START <header-->
 	<header class = "header">
@@ -18,24 +16,29 @@
 	</header>
   <div class="container">
 		<form method="GET">
-
 	<input list="browsers" type="text" name="food" id="food" placeholder="Search Food Recipes" required="">
 			 <datalist id="browsers">
 			 	<option value="                                                                                                ">
 			 </datalist>
 			<button type="submit" id="buttonSearch">Search</button>
 		</form>
-
 	</div>
   	<!-- END <header-->
-
-		<section id="search-result"></section>
-
-
-		<script src="js/requests.js"></script>
+		<!--Start section-->
+<section id="search-result">
+	<div class="foods">
+		<div id="image" >
+			<img id="resultImg" src="https://static.food2fork.com/Bacon2BWrapped2BJalapeno2BPopper2BStuffed2BChicken2B5002B5909939b0e65.jpg">
+		</div>
+		<div id="paragraph">
+			<h4>Dish-Name</h4>
+			<h4>Publisher-Name</h4>
+			<h4 hidden>Recipe-id</h4>
+		</div>
+	</div>
+</section>
+		<!--End section-->
+  		<script src="js/requests.js"></script>
 		<script src="js/dom.js"></script>
-
-</body>
-
-
+	</body>
 </html>
