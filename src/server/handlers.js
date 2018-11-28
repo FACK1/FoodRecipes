@@ -9,29 +9,31 @@ const errorHandler = (request, response) => {
 };
 
 const homeHandler = (request, response) => {
-  const htmlPath = path.join(__dirname, '../public/index.html');
-  fs.readFile(htmlPath, (error, html) => {
+  const htmlPath = path.join(__dirname, '..','..','public','index.html');
+  fs.readFile(htmlPath, (error, htmlFile) => {
     if (error) {
       response.writeHead(500, { 'content-Type': 'text/html' });
       response.end('<h1> Server error! sorry</h1>');
+      return;
     }
-    response.writeHead(200, { 'Content-Type': 'text/html' });
-    response.end(html);
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.write(htmlFile);
+    response.end();
   });
 };
 
 const publicHandler = (request, response) => {
   const extension = request.url.split('.')[1];
   const contentTypeMapping = {
-    html: 'text/html',
-    css: 'text/css',
-    js: 'application/js',
+    'html': 'text/html',
+    'css': 'text/css',
+    'js': 'application/js',
   };
   if (!contentTypeMapping[extension]) {
     response.writeHead(404, { 'Content-Type': 'text/html' });
     response.end('<h1> Not Found </h1>');
   } else {
-    const filePath = path.join(__dirname, '..', 'public', request.url);
+    const filePath = path.join(__dirname, '..','..', 'public', request.url);
     fs.readFile(filePath, (error, file) => {
       if (error) {
         errorHandler(request, response);
