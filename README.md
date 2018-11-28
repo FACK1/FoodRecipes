@@ -11,27 +11,27 @@ App Architecture:
 
 * public Folder:
 
-CSS
+. CSS
   index.css
   reset.css
 
-JS
+. JS
   Dom.js
   requests.js
 
-ndex.html
+. Index.html
 
-Src Folder:
+* Src Folder:
 
-archrecipes
+. Archrecipes
    Searchrecipes.js
    
-Server:
+. Server:
    handlers.js
    router.js
    server.js
    
-Test
+. Test
    test.js
 
 * .gitignore
