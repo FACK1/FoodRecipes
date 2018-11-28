@@ -2,13 +2,13 @@
 
 # About:
 A website for searching about food recipes
-# User journey 
+# User journey:
 In our app you can  search for your favourite food by putting the name of it in the place of search. 
 # Site Link in Heroku :
 [Food Recpies](https://foodrecipes-.herokuapp.com/) 
 # Site design 
 
-# Architecture 
+# Architecture:
 - Front-End :
   we create  public folder and put inside its folders like :
    - Css folder:
