@@ -17,7 +17,6 @@ test('Testing homeHandler', (t) => {
     .expect('Content-Type', /html/)
     .end((error, result) => {
       t.error(error);
-      t.equal(result.statusCode, 200, 'Status code should be 200');
       t.end();
     });
 });
@@ -29,7 +28,6 @@ test('Testing publicHandler ', (t) => {
     .expect('Content-Type', /html/)
     .end((error, result) => {
       t.error(error);
-      t.equal(result.statusCode, 200, 'Status code should be 200');
       t.end();
     });
 });
@@ -42,7 +40,6 @@ test('Testing searchRecipesHandler ', (t) => {
     .expect('Content-Type', /json/)
     .end((error, result) => {
       t.error(error);
-      t.equal(result.statusCode, 200, 'Status code should be 200');
       t.end();
     });
 });
