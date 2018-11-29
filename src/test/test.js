@@ -1,5 +1,7 @@
 const test = require('tape');
 const supertest = require('supertest');
+const fs = require('fs');
+const path = require('path');
 const router = require('../server/router');
 
 test('Testing tape', (t) => {
@@ -28,6 +30,9 @@ test('Testing publicHandler ', (t) => {
     .expect('Content-Type', /html/)
     .end((error, result) => {
       t.error(error);
+      const actual = result.text.includes('<title> Food Recipes</title>');
+      const expected = true;
+      t.equal(actual, expected, 'response should contains title tag');
       t.end();
     });
 });
