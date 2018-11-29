@@ -7,7 +7,7 @@ const search = (req, res, value) => {
   request(searchUrl, (error, response, body) => {
     if (error || (response.statusCode !== 200)) {
       // console.log(response.statusCode);
-      handlers.errorHandler();
+      handlers.errorHandler(req, res);
     } else {
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(body);

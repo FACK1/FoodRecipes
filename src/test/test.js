@@ -1,5 +1,7 @@
 const test = require('tape');
 const supertest = require('supertest');
+const fs = require('fs');
+const path = require('path');
 const router = require('../server/router');
 
 test('Testing tape', (t) => {
@@ -17,7 +19,6 @@ test('Testing homeHandler', (t) => {
     .expect('Content-Type', /html/)
     .end((error, result) => {
       t.error(error);
-      t.equal(result.statusCode, 200, 'Status code should be 200');
       t.end();
     });
 });
@@ -29,7 +30,9 @@ test('Testing publicHandler ', (t) => {
     .expect('Content-Type', /html/)
     .end((error, result) => {
       t.error(error);
-      t.equal(result.statusCode, 200, 'Status code should be 200');
+      const actual = result.text.includes('<title> Food Recipes</title>');
+      const expected = true;
+      t.equal(actual, expected, 'response should contains title tag');
       t.end();
     });
 });
@@ -42,7 +45,6 @@ test('Testing searchRecipesHandler ', (t) => {
     .expect('Content-Type', /json/)
     .end((error, result) => {
       t.error(error);
-      t.equal(result.statusCode, 200, 'Status code should be 200');
       t.end();
     });
 });
