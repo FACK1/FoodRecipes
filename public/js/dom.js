@@ -49,9 +49,9 @@ var createHtmlItem = function (recipe) {
   var paragraphDiv = document.createElement('div');
   paragraphDiv.setAttribute('class', 'paragraph');
   var dishH4 = document.createElement('h4');
-  dishH4.innerText = recipe.title;
+  dishH4.innerText = 'Dish: ' + recipe.title;
   var publisherH4 = document.createElement('h4');
-  publisherH4.innerText = recipe.publisher;
+  publisherH4.innerText = 'Publisher: ' + recipe.publisher;
   var recipeIdInput = document.createElement('input');
   recipeIdInput.setAttribute('type', 'hidden');
   paragraphDiv.appendChild(dishH4);
